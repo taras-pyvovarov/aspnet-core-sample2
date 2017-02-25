@@ -1,5 +1,6 @@
 ﻿"use strict";
 
+var webpackNotifierPlugin = require('webpack-notifier');
 var path = require('path');
 
 module.exports = {
@@ -22,5 +23,9 @@ module.exports = {
                 loader: "babel-loader"
             }
         ]
-    }
+    },
+
+    plugins: [
+      new webpackNotifierPlugin()
+    ]
 };
